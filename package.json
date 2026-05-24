@@ -1,0 +1,25 @@
+{
+  "name": "evobot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YangtozoR59/EvoBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YangtozoR59/EvoBot/issues"
+  },
+  "homepage": "https://github.com/YangtozoR59/EvoBot#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "telegraf": "^4.16.3"
+  }
+}
