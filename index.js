@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const BOT_TOKEN = process.env.BOT_TOKEN || '8203109380:AAGTv_gO0r2DHGr_S8U0AY1nNnWkPu_3o90';
 const OWNER_CHAT_ID = process.env.OWNER_CHAT_ID || '';
-const WEBAPP_URL = process.env.WEBAPP_URL || '';
+const WEBAPP_URL = process.env.WEBAPP_URL || 'https://evobot-9ho6.onrender.com';
 
 // Parse JSON bodies
 app.use(express.json());
@@ -85,7 +85,6 @@ const bot = new Telegraf(BOT_TOKEN);
 const getMainMenu = () => {
     const buttons = [
         [Markup.button.callback('💼 Voir nos Services', 'services')],
-        [Markup.button.callback('🎯 Portfolio / Réalisations', 'portfolio')],
         [Markup.button.callback('📩 Nous Contacter', 'contact')]
     ];
 
@@ -126,33 +125,23 @@ bot.action('services', (ctx) => {
     );
 });
 
-// Action du bouton "Portfolio"
-bot.action('portfolio', (ctx) => {
-    ctx.editMessageText(
-        `🎯 *Notre Portfolio :*\n\n` +
-        `Voici quelques exemples de nos derniers projets :\n\n` +
-        `🌐 [Site E-commerce - Client A](https://example.com)\n` +
-        `📱 [Application Mobile - Client B](https://example.com)\n` +
-        `🎨 [Identité Visuelle - Projet C](https://example.com)\n\n` +
-        `N'hésitez pas à nous poser des questions sur nos réalisations !`,
-        {
-            parse_mode: 'Markdown',
-            ...Markup.inlineKeyboard([[Markup.button.callback('⬅️ Retour au Menu', 'main_menu')]])
-        }
-    );
-});
+
 
 // Action du bouton "Contact"
 bot.action('contact', (ctx) => {
     ctx.editMessageText(
         `📩 *Nous Contacter :*\n\n` +
         `Pour discuter de votre projet, vous pouvez :\n\n` +
-        `💬 M'écrire directement sur Telegram : @EvodevTeam\n` +
-        `📧 Par Email : contact@evodevs.team\n\n` +
+        `💬 Telegram : @ItzCyd\n` +
+        `📧 Email : calebyangcyd@gmail.com\n` +
+        `🌐 Portfolio : https://itzcyd.vercel.app\n\n` +
         `⏱ _Réponse généralement sous 24h._`,
         {
             parse_mode: 'Markdown',
-            ...Markup.inlineKeyboard([[Markup.button.callback('⬅️ Retour au Menu', 'main_menu')]])
+            ...Markup.inlineKeyboard([
+                [Markup.button.url('🌐 Voir le Portfolio', 'https://itzcyd.vercel.app')],
+                [Markup.button.callback('⬅️ Retour au Menu', 'main_menu')]
+            ])
         }
     );
 });

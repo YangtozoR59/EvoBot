@@ -242,8 +242,14 @@ function renderAbout() {
         <span class="tech-badge glass animate-in">☁️ AWS / Render</span>
       </div>
 
-      <a href="https://t.me/EvodevTeam" target="_blank" class="btn-contact animate-in">
+      <a href="https://t.me/ItzCyd" target="_blank" class="btn-contact animate-in">
         💬 Nous contacter sur Telegram
+      </a>
+      <a href="mailto:calebyangcyd@gmail.com" class="btn-contact animate-in" style="margin-top:8px;">
+        📧 calebyangcyd@gmail.com
+      </a>
+      <a href="https://itzcyd.vercel.app" target="_blank" class="btn-contact animate-in" style="margin-top:8px;">
+        🌐 Portfolio — itzcyd.vercel.app
       </a>
     </div>`;
 }

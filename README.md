@@ -73,10 +73,10 @@ Dans l'onglet **Environment** du service Render, ajoutez :
 ```
 BOT_TOKEN=8203109380:AAGTv_gO0r2DHGr_S8U0AY1nNnWkPu_3o90
 OWNER_CHAT_ID=<votre_chat_id>
-WEBAPP_URL=https://evobot-xxxx.onrender.com
+WEBAPP_URL=https://evobot-9ho6.onrender.com
 ```
 
-> ⚠️ Remplacez `evobot-xxxx` par le sous-domaine réel attribué par Render après le premier déploiement.
+> ✅ L'URL de production est `https://evobot-9ho6.onrender.com`.
 
 ### 3. Déployer
 
@@ -100,7 +100,7 @@ Une fois l'URL Render connue, mettez à jour la variable `WEBAPP_URL` avec l'URL
 |---|---|
 | **Monitor Type** | `HTTP(s)` |
 | **Friendly Name** | `EvoBot` |
-| **URL** | `https://evobot-xxxx.onrender.com` |
+| **URL** | `https://evobot-9ho6.onrender.com` |
 | **Monitoring Interval** | `5 minutes` |
 
 4. Cliquez **Create Monitor**
@@ -144,6 +144,12 @@ Envoie une notification de commande au propriétaire via Telegram.
 ```
 
 **Réponse :** `{ "ok": true }`
+
+## 📬 Contact
+
+- **Telegram** : [@ItzCyd](https://t.me/ItzCyd)
+- **Email** : calebyangcyd@gmail.com
+- **Portfolio** : [itzcyd.vercel.app](https://itzcyd.vercel.app)
 
 ## 📄 Licence
 
