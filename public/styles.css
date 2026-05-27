@@ -1,5 +1,5 @@
 /* ========================================
-   EVODEVS TEAM — MINI APP DESIGN SYSTEM
+   ANONYMOUS EVODEVS SHOP — MINI APP DESIGN SYSTEM
    ======================================== */
 
 /* --- Google Font --- */
@@ -925,4 +925,30 @@ body::before {
 @media (min-width: 500px) {
   .page { padding: 24px; }
   .modal-content { border-radius: var(--radius-lg); margin: auto 16px; }
+}
+
+/* --- Hero Anonymous Icon --- */
+.hero-anon-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* --- About CTA Block --- */
+.about-cta {
+  text-align: center;
+  padding: 20px;
+  margin: 24px 0;
+}
+
+.about-cta-text {
+  font-size: 14px;
+  color: var(--silver-400);
+  line-height: 1.7;
+  margin-bottom: 8px;
 }

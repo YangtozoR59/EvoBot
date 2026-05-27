@@ -1,5 +1,5 @@
 /* ========================================
-   EVODEVS TEAM — MINI APP SPA
+   ANONYMOUS EVODEVS SHOP — MINI APP SPA
    ======================================== */
 
 // ---- Telegram WebApp SDK ----
@@ -10,44 +10,44 @@ if (tg) { tg.ready(); tg.expand(); }
 const SERVICES = [
   {
     id: 'web', icon: '🌐', name: 'Site Web Vitrine',
-    desc: 'Présence en ligne moderne, responsive et optimisée SEO.',
-    longDesc: 'Nous concevons des sites web vitrines élégants et performants, parfaitement adaptés à tous les écrans. Chaque site est optimisé pour le référencement naturel et les performances.',
-    features: ['Design responsive mobile-first', 'Optimisation SEO avancée', 'Animations & micro-interactions', 'Hébergement & déploiement', 'Maintenance 3 mois incluse'],
-    price: '150 000 FCFA', delay: '5-7 jours'
+    desc: 'Présence en ligne discrète, responsive et optimisée.',
+    longDesc: 'Nous concevons des sites web vitrines élégants et performants, adaptés à tous les écrans. Anonymat et discrétion garantis pour votre projet.',
+    features: ['Design responsive mobile-first', 'Optimisation SEO avancée', 'Animations & micro-interactions', 'Hébergement & déploiement sécurisé', 'Maintenance 3 mois incluse'],
+    price: '250 €', delay: '5-7 jours'
   },
   {
     id: 'ecommerce', icon: '🛒', name: 'Site E-commerce',
     desc: 'Boutique en ligne complète avec paiement et gestion stocks.',
-    longDesc: 'Solution e-commerce clé en main avec catalogue produits, panier, paiement mobile money et gestion des commandes en temps réel.',
-    features: ['Catalogue produits illimité', 'Paiement Mobile Money intégré', 'Gestion des stocks', 'Dashboard administrateur', 'Formation à l\'utilisation'],
-    price: '300 000 FCFA', delay: '10-15 jours'
+    longDesc: 'Solution e-commerce clé en main avec catalogue produits, panier, systèmes de paiement multiples et gestion des commandes en temps réel.',
+    features: ['Catalogue produits illimité', 'Paiements multiples intégrés', 'Gestion des stocks', 'Dashboard administrateur', 'Formation à l\'utilisation'],
+    price: '500 €', delay: '10-15 jours'
   },
   {
     id: 'mobile', icon: '📱', name: 'Application Mobile',
     desc: 'Apps natives et cross-platform iOS & Android.',
-    longDesc: 'Développement d\'applications mobiles performantes avec React Native ou Flutter, publiées sur les stores Apple et Google.',
-    features: ['Cross-platform iOS & Android', 'UI/UX premium', 'Notifications push', 'API backend incluse', 'Publication sur les stores'],
-    price: '500 000 FCFA', delay: '15-30 jours'
+    longDesc: 'Développement d\'applications mobiles performantes, publiées sur les stores ou distribuées en privé selon vos besoins.',
+    features: ['Cross-platform iOS & Android', 'UI/UX premium', 'Notifications push', 'API backend incluse', 'Distribution flexible'],
+    price: '800 €', delay: '15-30 jours'
   },
   {
     id: 'bot', icon: '🤖', name: 'Bot Telegram',
     desc: 'Bots personnalisés et Mini Apps Telegram.',
     longDesc: 'Création de bots Telegram intelligents avec commandes personnalisées, Mini Apps intégrées, et automatisations avancées.',
     features: ['Commandes personnalisées', 'Mini App intégrée', 'Base de données', 'Paiements intégrés', 'Déploiement cloud'],
-    price: '100 000 FCFA', delay: '3-5 jours'
+    price: '150 €', delay: '3-5 jours'
   },
   {
     id: 'design', icon: '🎨', name: 'Design & Identité',
     desc: 'Logos, chartes graphiques et maquettes UI/UX.',
     longDesc: 'Création d\'identités visuelles uniques et mémorables. Du logo à la charte graphique complète, en passant par les maquettes d\'interfaces.',
     features: ['3 propositions de logo', 'Charte graphique complète', 'Fichiers HD & vectoriels', 'Maquettes UI/UX Figma', 'Guide de style'],
-    price: '80 000 FCFA', delay: '3-5 jours'
+    price: '130 €', delay: '3-5 jours'
   },
   {
-    id: 'consulting', icon: '💡', name: 'Consulting Digital',
-    desc: 'Audit, stratégie et accompagnement digital.',
-    longDesc: 'Accompagnement stratégique pour votre transformation digitale. Audit de l\'existant, recommandations et mise en œuvre.',
-    features: ['Audit complet de l\'existant', 'Stratégie digitale sur mesure', 'Choix technologiques', 'Accompagnement projet', 'Formation équipe'],
+    id: 'custom', icon: '🔧', name: 'Solution Sur Mesure',
+    desc: 'Tout type de solution digitale, sans limites.',
+    longDesc: 'Vous avez un besoin spécifique ? Nous développons toute solution digitale sur mesure, en toute discrétion et confidentialité. Aucune question posée.',
+    features: ['Analyse de votre besoin', 'Développement 100% sur mesure', 'Confidentialité totale', 'Aucune trace', 'Support dédié et anonyme'],
     price: 'Sur devis', delay: 'Variable'
   }
 ];
@@ -99,12 +99,12 @@ function renderHome() {
   return `
     <div class="page active" id="page-home">
       <div class="hero">
-        <img src="logo.svg" alt="Evodevs Team" class="hero-logo animate-in">
-        <h1 class="hero-title animate-in">Evodevs Team</h1>
+        <div class="hero-anon-icon animate-in">🕵️</div>
+        <h1 class="hero-title animate-in">Anonymous EvoDevs Shop</h1>
         <p class="hero-slogan animate-in" id="typewriter"><span class="cursor"></span></p>
         <p class="hero-desc animate-in">
-          Collectif de développeurs passionnés.<br>
-          Nous transformons vos idées en solutions digitales performantes.
+          Solutions digitales premium.<br>
+          Confiance, discrétion et anonymat garantis.
         </p>
         <button class="btn-cta animate-in" onclick="navigate('services')">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
@@ -113,10 +113,10 @@ function renderHome() {
       </div>
 
       <div class="chips-row animate-in">
+        <span class="chip">🔒 Anonymat</span>
+        <span class="chip">🤫 Discrétion</span>
         <span class="chip">⚡ Rapide</span>
-        <span class="chip">🔒 Sécurisé</span>
-        <span class="chip">📱 Responsive</span>
-        <span class="chip">🎨 Premium</span>
+        <span class="chip">💎 Premium</span>
       </div>
 
       <div class="stats-grid stagger">
@@ -129,8 +129,8 @@ function renderHome() {
           <div class="stat-label">Clients satisfaits</div>
         </div>
         <div class="stat-card glass animate-in">
-          <div class="stat-number" data-count="3">0</div>
-          <div class="stat-label">Ans d'expérience</div>
+          <div class="stat-number" data-count="100">0</div>
+          <div class="stat-label">% Discrétion</div>
         </div>
       </div>
     </div>`;
@@ -151,7 +151,7 @@ function renderServices() {
     <div class="page active" id="page-services">
       <div class="page-header animate-in">
         <h2>Nos Services</h2>
-        <p>Solutions digitales sur mesure pour votre projet</p>
+        <p>Solutions digitales sur mesure — légales ou non conventionnelles</p>
       </div>
       <div class="services-grid stagger">${cards}</div>
     </div>`;
@@ -168,15 +168,15 @@ function renderPolicy() {
 
         <div class="policy-section glass animate-in">
           <h3>1. Processus de commande</h3>
-          <p>Toute commande débute par une prise de contact via notre formulaire ou Telegram. Un devis détaillé vous est envoyé sous 24h. Le projet ne commence qu'après validation du devis et versement de l'acompte (50%).</p>
+          <p>Toute commande est initiée directement via cette application. Un devis détaillé vous est fourni sous 24h. Le projet démarre après validation et versement de l'acompte (50%). Toutes les communications restent dans l'application.</p>
         </div>
         <div class="policy-section glass animate-in">
           <h3>2. Délais de livraison</h3>
-          <p>Les délais indiqués sont estimatifs et dépendent de la complexité du projet. Un calendrier précis est défini lors de la validation du devis. Tout retard sera communiqué en amont.</p>
+          <p>Les délais indiqués sont estimatifs. Un calendrier précis est défini lors de la validation. Tout retard est communiqué en amont via l'application.</p>
         </div>
         <div class="policy-section glass animate-in">
           <h3>3. Paiement</h3>
-          <p>Paiement en deux fois : 50% à la commande, 50% à la livraison. Modes de paiement acceptés : Mobile Money (Orange Money, MTN MoMo), virement bancaire.</p>
+          <p>Paiement en deux fois : 50% à la commande, 50% à la livraison. Modes de paiement acceptés : crypto-monnaies, virement bancaire, et autres méthodes discrètes à convenir.</p>
         </div>
         <div class="policy-section glass animate-in">
           <h3>4. Révisions & modifications</h3>
@@ -184,11 +184,15 @@ function renderPolicy() {
         </div>
         <div class="policy-section glass animate-in">
           <h3>5. Propriété intellectuelle</h3>
-          <p>Le code source et les livrables sont la propriété du client après paiement intégral. Les outils et bibliothèques internes d'Evodevs Team restent notre propriété.</p>
+          <p>Le code source et les livrables sont la propriété du client après paiement intégral. Nos outils et bibliothèques internes restent notre propriété.</p>
         </div>
         <div class="policy-section glass animate-in">
-          <h3>6. Confidentialité</h3>
-          <p>Toutes les informations partagées dans le cadre d'un projet sont strictement confidentielles. Nous ne partageons aucune donnée avec des tiers.</p>
+          <h3>6. Confidentialité & Anonymat</h3>
+          <p>La confidentialité est notre priorité absolue. Aucune donnée personnelle n'est conservée au-delà du projet. Nous ne partageons aucune information avec des tiers. Aucun journal, aucune trace. Votre projet reste entre vous et nous.</p>
+        </div>
+        <div class="policy-section glass animate-in">
+          <h3>7. Politique de non-divulgation</h3>
+          <p>Nous appliquons un strict protocole de non-divulgation sur chaque projet. Aucune référence client n'est publiée sans accord explicite. La discrétion est totale et non négociable.</p>
         </div>
       </div>
     </div>`;
@@ -203,54 +207,51 @@ function renderAbout() {
       </div>
 
       <div class="about-intro glass animate-in">
-        <p><strong>Evodevs Team</strong> est un collectif de développeurs et designers passionnés par la technologie et l'innovation. Basés en Afrique, nous accompagnons les entreprises et entrepreneurs dans leur transformation digitale avec des solutions modernes, performantes et accessibles.</p>
+        <p><strong>Anonymous EvoDevs Shop</strong> est un collectif de développeurs et designers opérant dans l'ombre. Nous fournissons tout type de solutions digitales — légales ou non conventionnelles — en toute confiance et discrétion. Pas de questions, pas de traces, que des résultats.</p>
       </div>
 
       <h3 class="section-title animate-in">💎 Nos Valeurs</h3>
       <div class="values-grid stagger">
         <div class="value-card glass-card animate-in">
-          <div class="value-icon">🎯</div>
-          <div class="value-name">Excellence</div>
-          <div class="value-desc">Qualité premium sur chaque projet</div>
+          <div class="value-icon">🔒</div>
+          <div class="value-name">Anonymat</div>
+          <div class="value-desc">Votre identité reste protégée</div>
         </div>
         <div class="value-card glass-card animate-in">
-          <div class="value-icon">🤝</div>
-          <div class="value-name">Confiance</div>
-          <div class="value-desc">Transparence et communication</div>
+          <div class="value-icon">🤫</div>
+          <div class="value-name">Discrétion</div>
+          <div class="value-desc">Aucune trace, aucun journal</div>
         </div>
         <div class="value-card glass-card animate-in">
           <div class="value-icon">⚡</div>
-          <div class="value-name">Rapidité</div>
-          <div class="value-desc">Livraison dans les délais</div>
+          <div class="value-name">Efficacité</div>
+          <div class="value-desc">Livraison rapide et fiable</div>
         </div>
         <div class="value-card glass-card animate-in">
-          <div class="value-icon">💡</div>
-          <div class="value-name">Innovation</div>
-          <div class="value-desc">Technologies de pointe</div>
+          <div class="value-icon">💎</div>
+          <div class="value-name">Qualité</div>
+          <div class="value-desc">Solutions premium garanties</div>
         </div>
       </div>
 
-      <h3 class="section-title animate-in">🛠 Stack Technique</h3>
+      <h3 class="section-title animate-in">🛠 Nos Compétences</h3>
       <div class="tech-stack stagger">
         <span class="tech-badge glass animate-in">⚛️ React</span>
         <span class="tech-badge glass animate-in">🟢 Node.js</span>
         <span class="tech-badge glass animate-in">🐍 Python</span>
         <span class="tech-badge glass animate-in">📱 Flutter</span>
         <span class="tech-badge glass animate-in">🎨 Figma</span>
-        <span class="tech-badge glass animate-in">🤖 Telegraf</span>
-        <span class="tech-badge glass animate-in">🗄 PostgreSQL</span>
-        <span class="tech-badge glass animate-in">☁️ AWS / Render</span>
+        <span class="tech-badge glass animate-in">🤖 Bots</span>
+        <span class="tech-badge glass animate-in">🗄 Databases</span>
+        <span class="tech-badge glass animate-in">☁️ Cloud</span>
       </div>
 
-      <a href="https://t.me/ItzCyd" target="_blank" class="btn-contact animate-in">
-        💬 Nous contacter sur Telegram
-      </a>
-      <a href="mailto:calebyangcyd@gmail.com" class="btn-contact animate-in" style="margin-top:8px;">
-        📧 calebyangcyd@gmail.com
-      </a>
-      <a href="https://itzcyd.vercel.app" target="_blank" class="btn-contact animate-in" style="margin-top:8px;">
-        🌐 Portfolio — itzcyd.vercel.app
-      </a>
+      <div class="about-cta glass animate-in">
+        <p class="about-cta-text">💬 Pour toute demande, utilisez directement le formulaire de commande dans l'onglet <strong>Services</strong>.</p>
+        <button class="btn-cta" onclick="navigate('services')" style="margin-top:12px;">
+          Voir nos services
+        </button>
+      </div>
     </div>`;
 }
 
@@ -294,27 +295,27 @@ function openOrderForm(serviceId) {
       <p style="font-size:13px;color:var(--silver-500);margin-bottom:20px;">${s ? s.name : 'Service'}</p>
       <form id="orderForm" onsubmit="submitOrder(event, '${serviceId}')">
         <div class="form-group">
-          <label class="form-label">Votre nom *</label>
-          <input type="text" class="form-input" name="name" placeholder="Prénom et nom" required>
+          <label class="form-label">Votre pseudo / alias *</label>
+          <input type="text" class="form-input" name="name" placeholder="Pseudonyme ou alias" required>
           <div class="form-error" id="err-name">Ce champ est requis</div>
         </div>
         <div class="form-group">
-          <label class="form-label">Email</label>
-          <input type="email" class="form-input" name="email" placeholder="votre@email.com">
+          <label class="form-label">Contact sécurisé (optionnel)</label>
+          <input type="text" class="form-input" name="email" placeholder="Telegram, Session, Signal...">
         </div>
         <div class="form-group">
           <label class="form-label">Budget estimé</label>
           <select class="form-select" name="budget">
             <option value="">Sélectionner un budget</option>
-            <option value="< 100 000 FCFA">Moins de 100 000 FCFA</option>
-            <option value="100 000 - 300 000 FCFA">100 000 - 300 000 FCFA</option>
-            <option value="300 000 - 500 000 FCFA">300 000 - 500 000 FCFA</option>
-            <option value="> 500 000 FCFA">Plus de 500 000 FCFA</option>
+            <option value="< 150 €">Moins de 150 €</option>
+            <option value="150 - 500 €">150 - 500 €</option>
+            <option value="500 - 800 €">500 - 800 €</option>
+            <option value="> 800 €">Plus de 800 €</option>
           </select>
         </div>
         <div class="form-group">
           <label class="form-label">Description du projet</label>
-          <textarea class="form-textarea" name="description" placeholder="Décrivez votre projet en quelques lignes..."></textarea>
+          <textarea class="form-textarea" name="description" placeholder="Décrivez votre projet en quelques lignes... Toutes les infos restent confidentielles."></textarea>
         </div>
         <div class="form-group">
           <label class="form-checkbox">
@@ -368,7 +369,7 @@ async function submitOrder(e, serviceId) {
         <div class="success-screen">
           <div class="success-icon">✅</div>
           <h3 class="success-title">Commande envoyée !</h3>
-          <p class="success-msg">Merci ${data.name} ! Votre demande pour <strong>${data.service}</strong> a bien été reçue. Nous vous recontacterons sous 24h.</p>
+          <p class="success-msg">Merci ${data.name} ! Votre demande pour <strong>${data.service}</strong> a été reçue. Nous vous recontacterons sous 24h via votre canal sécurisé.</p>
           <button class="btn-cta" onclick="closeModal('orderModal')">Fermer</button>
         </div>`;
     } else {
@@ -400,10 +401,10 @@ function startTypewriter() {
   const el = document.getElementById('typewriter');
   if (!el) return;
   const phrases = [
-    'Votre vision, notre code.',
-    'L\'innovation au service de vos projets.',
-    'Du concept au déploiement.',
-    'Solutions digitales sur mesure.'
+    'Votre projet. Notre discrétion.',
+    'Aucune limite. Aucune trace.',
+    'Solutions digitales anonymes.',
+    'Confiance et confidentialité.'
   ];
   let phraseIdx = 0, charIdx = 0, isDeleting = false;
 

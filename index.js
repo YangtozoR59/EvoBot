@@ -36,8 +36,8 @@ app.post('/api/send-order', async (req, res) => {
 
         const message =
             `📩 *Nouvelle Commande !*\n\n` +
-            `👤 *Client :* ${name}\n` +
-            `📧 *Email :* ${email || 'Non renseigné'}\n` +
+            `🕵️ *Alias :* ${name}\n` +
+            `🔐 *Contact sécurisé :* ${email || 'Non renseigné'}\n` +
             `💼 *Service :* ${service}\n` +
             `💰 *Budget :* ${budget || 'Non précisé'}\n` +
             `${urgent ? '🔴 *URGENT*\n' : ''}` +
@@ -84,13 +84,12 @@ const bot = new Telegraf(BOT_TOKEN);
 // Menu principal avec boutons sous le message
 const getMainMenu = () => {
     const buttons = [
-        [Markup.button.callback('💼 Voir nos Services', 'services')],
-        [Markup.button.callback('📩 Nous Contacter', 'contact')]
+        [Markup.button.callback('💼 Voir nos Services', 'services')]
     ];
 
     // Ajouter le bouton WebApp si l'URL est configurée
     if (WEBAPP_URL) {
-        buttons.unshift([Markup.button.webApp('🚀 Ouvrir la Mini App', WEBAPP_URL)]);
+        buttons.unshift([Markup.button.webApp('🚀 Ouvrir le Shop', WEBAPP_URL)]);
     }
 
     return Markup.inlineKeyboard(buttons);
@@ -100,7 +99,7 @@ const getMainMenu = () => {
 bot.start((ctx) => {
     const name = ctx.from.first_name;
     ctx.reply(
-        `Bonjour ${name} ! 👋\n\nJe suis le bot officiel d'*Evodevs Team*.\n\nNous concevons des solutions digitales sur mesure : sites web, apps mobiles, bots Telegram, design UI/UX et plus encore.\n\nComment puis-je vous aider ?`,
+        `Bienvenue ${name} 🕵️\n\n*Anonymous EvoDevs Shop*\n\nSolutions digitales sur mesure — en toute confiance et discrétion.\n\nOuvrez le Shop pour découvrir nos services et passer commande.`,
         { parse_mode: 'Markdown', ...getMainMenu() }
     );
 });
@@ -108,38 +107,18 @@ bot.start((ctx) => {
 // Action du bouton "Services"
 bot.action('services', (ctx) => {
     ctx.editMessageText(
-        `💼 *Nos Prestations & Services :*\n\n` +
-        `• *Développement Web* : Sites vitrines, e-commerce, applications sur mesure.\n` +
-        `• *Applications Mobiles* : Apps natives et cross-platform.\n` +
-        `• *Bots Telegram* : Bots personnalisés, Mini Apps intégrées.\n` +
-        `• *Design & Identité* : Logos, chartes graphiques, maquettes UI/UX.\n` +
-        `• *Consulting* : Optimisation de vos outils et stratégie digitale.\n\n` +
-        `*Tarifs sur devis selon vos besoins.*`,
+        `💼 *Nos Services :*\n\n` +
+        `• *Site Web Vitrine* — 250 €\n` +
+        `• *Site E-commerce* — 500 €\n` +
+        `• *Application Mobile* — 800 €\n` +
+        `• *Bot Telegram* — 150 €\n` +
+        `• *Design & Identité* — 130 €\n` +
+        `• *Solution Sur Mesure* — Sur devis\n\n` +
+        `🔒 _Ouvrez le Shop pour commander en toute discrétion._`,
         {
             parse_mode: 'Markdown',
             ...Markup.inlineKeyboard([
-                [Markup.button.callback('📩 Commander / Demander un devis', 'contact')],
-                [Markup.button.callback('⬅️ Retour au Menu', 'main_menu')]
-            ])
-        }
-    );
-});
-
-
-
-// Action du bouton "Contact"
-bot.action('contact', (ctx) => {
-    ctx.editMessageText(
-        `📩 *Nous Contacter :*\n\n` +
-        `Pour discuter de votre projet, vous pouvez :\n\n` +
-        `💬 Telegram : @ItzCyd\n` +
-        `📧 Email : calebyangcyd@gmail.com\n` +
-        `🌐 Portfolio : https://itzcyd.vercel.app\n\n` +
-        `⏱ _Réponse généralement sous 24h._`,
-        {
-            parse_mode: 'Markdown',
-            ...Markup.inlineKeyboard([
-                [Markup.button.url('🌐 Voir le Portfolio', 'https://itzcyd.vercel.app')],
+                ...(WEBAPP_URL ? [[Markup.button.webApp('🚀 Ouvrir le Shop', WEBAPP_URL)]] : []),
                 [Markup.button.callback('⬅️ Retour au Menu', 'main_menu')]
             ])
         }
