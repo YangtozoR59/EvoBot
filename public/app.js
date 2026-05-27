@@ -13,35 +13,35 @@ const SERVICES = [
     desc: 'Présence en ligne discrète, responsive et optimisée.',
     longDesc: 'Nous concevons des sites web vitrines élégants et performants, adaptés à tous les écrans. Anonymat et discrétion garantis pour votre projet.',
     features: ['Design responsive mobile-first', 'Optimisation SEO avancée', 'Animations & micro-interactions', 'Hébergement & déploiement sécurisé', 'Maintenance 3 mois incluse'],
-    price: '250 €', delay: '5-7 jours'
+    price: '1 200 €', delay: '5-7 jours'
   },
   {
     id: 'ecommerce', icon: '🛒', name: 'Site E-commerce',
     desc: 'Boutique en ligne complète avec paiement et gestion stocks.',
     longDesc: 'Solution e-commerce clé en main avec catalogue produits, panier, systèmes de paiement multiples et gestion des commandes en temps réel.',
     features: ['Catalogue produits illimité', 'Paiements multiples intégrés', 'Gestion des stocks', 'Dashboard administrateur', 'Formation à l\'utilisation'],
-    price: '500 €', delay: '10-15 jours'
+    price: '3 500 €', delay: '10-15 jours'
   },
   {
     id: 'mobile', icon: '📱', name: 'Application Mobile',
     desc: 'Apps natives et cross-platform iOS & Android.',
     longDesc: 'Développement d\'applications mobiles performantes, publiées sur les stores ou distribuées en privé selon vos besoins.',
     features: ['Cross-platform iOS & Android', 'UI/UX premium', 'Notifications push', 'API backend incluse', 'Distribution flexible'],
-    price: '800 €', delay: '15-30 jours'
+    price: '5 000 €', delay: '15-30 jours'
   },
   {
     id: 'bot', icon: '🤖', name: 'Bot Telegram',
     desc: 'Bots personnalisés et Mini Apps Telegram.',
     longDesc: 'Création de bots Telegram intelligents avec commandes personnalisées, Mini Apps intégrées, et automatisations avancées.',
     features: ['Commandes personnalisées', 'Mini App intégrée', 'Base de données', 'Paiements intégrés', 'Déploiement cloud'],
-    price: '150 €', delay: '3-5 jours'
+    price: '800 €', delay: '3-5 jours'
   },
   {
     id: 'design', icon: '🎨', name: 'Design & Identité',
     desc: 'Logos, chartes graphiques et maquettes UI/UX.',
     longDesc: 'Création d\'identités visuelles uniques et mémorables. Du logo à la charte graphique complète, en passant par les maquettes d\'interfaces.',
     features: ['3 propositions de logo', 'Charte graphique complète', 'Fichiers HD & vectoriels', 'Maquettes UI/UX Figma', 'Guide de style'],
-    price: '130 €', delay: '3-5 jours'
+    price: '900 €', delay: '3-5 jours'
   },
   {
     id: 'custom', icon: '🔧', name: 'Solution Sur Mesure',
@@ -99,7 +99,7 @@ function renderHome() {
   return `
     <div class="page active" id="page-home">
       <div class="hero">
-        <div class="hero-anon-icon animate-in">🕵️</div>
+        <img src="logo.svg" alt="Anonymous EvoDevs Shop" class="hero-logo animate-in">
         <h1 class="hero-title animate-in">Anonymous EvoDevs Shop</h1>
         <p class="hero-slogan animate-in" id="typewriter"><span class="cursor"></span></p>
         <p class="hero-desc animate-in">
@@ -307,10 +307,10 @@ function openOrderForm(serviceId) {
           <label class="form-label">Budget estimé</label>
           <select class="form-select" name="budget">
             <option value="">Sélectionner un budget</option>
-            <option value="< 150 €">Moins de 150 €</option>
-            <option value="150 - 500 €">150 - 500 €</option>
-            <option value="500 - 800 €">500 - 800 €</option>
-            <option value="> 800 €">Plus de 800 €</option>
+            <option value="< 1 000 €">Moins de 1 000 €</option>
+            <option value="1 000 - 3 000 €">1 000 - 3 000 €</option>
+            <option value="3 000 - 5 000 €">3 000 - 5 000 €</option>
+            <option value="> 5 000 €">Plus de 5 000 €</option>
           </select>
         </div>
         <div class="form-group">
