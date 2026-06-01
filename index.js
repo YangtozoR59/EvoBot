@@ -108,11 +108,11 @@ bot.start((ctx) => {
 bot.action('services', (ctx) => {
     ctx.editMessageText(
         `💼 *Nos Services :*\n\n` +
-        `• *Site Web Vitrine* — 100 €\n` +
-        `• *Site E-commerce* — 350 €\n` +
-        `• *Application Mobile* — 500 €\n` +
-        `• *Bot Telegram* — 80 €\n` +
-        `• *Design & Identité* — 90 €\n` +
+        `• *Site Web Vitrine* — 600€\n` +
+        `• *Site E-commerce* — 1400€\n` +
+        `• *Application Mobile* — 3000€\n` +
+        `• *Bot Telegram* — 300€\n` +
+        `• *Design & Identité* — 100€\n` +
         `• *Solution Sur Mesure* — Sur devis\n\n` +
         `🔒 _Ouvrez le Shop pour commander en toute discrétion._`,
         {
