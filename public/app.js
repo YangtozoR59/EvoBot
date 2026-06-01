@@ -307,10 +307,10 @@ function openOrderForm(serviceId) {
           <label class="form-label">Budget estimé</label>
           <select class="form-select" name="budget">
             <option value="">Sélectionner un budget</option>
-            <option value="< 1 000 €">Moins de 1 000 €</option>
-            <option value="1 000 - 3 000 €">1 000 - 3 000 €</option>
-            <option value="3 000 - 5 000 €">3 000 - 5 000 €</option>
-            <option value="> 5 000 €">Plus de 5 000 €</option>
+            <option value="< 100 €">Moins de 100 €</option>
+            <option value="100 - 300 €">100 - 300 €</option>
+            <option value="300 - 500 €">300 - 500 €</option>
+            <option value="> 500 €">Plus de 500 €</option>
           </select>
         </div>
         <div class="form-group">
