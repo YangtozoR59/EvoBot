@@ -65,7 +65,7 @@ const i18n = {
       descLabel: 'Project description',
       descPlaceholder: 'Describe your project in a few lines... All info remains confidential.',
       urgentLabel: '⚡ Urgent project (extra fee possible)',
-      termsLabel: 'I accept the <a href="#" onclick="event.preventDefault();closeModal(\\\'orderModal\\\');navigate(\\\'policy\\\')" style="color:var(--silver-300);text-decoration:underline;">terms and conditions</a> *',
+      termsLabel: 'I accept the <a href="#" onclick="event.preventDefault();closeModal(\'orderModal\');navigate(\'policy\')" style="color:var(--silver-300);text-decoration:underline;">terms and conditions</a> *',
       submitBtn: 'Send order',
       sending: 'Sending...',
       successTitle: 'Order sent!',
@@ -143,19 +143,19 @@ const i18n = {
       title: 'Politique & Conditions',
       date: 'Dernière mise à jour : Mai 2026',
       sections: [
-        { title: '1. Processus de commande', text: 'Toute commande est initiée directement via cette application. Un devis détaillé vous est fourni sous 24h. Le projet démarre après validation et versement de l\\'acompte (50%). Toutes les communications restent dans l\\'application.' },
-        { title: '2. Délais de livraison', text: 'Les délais indiqués sont estimatifs. Un calendrier précis est défini lors de la validation. Tout retard est communiqué en amont via l\\'application.' },
+        { title: '1. Processus de commande', text: 'Toute commande est initiée directement via cette application. Un devis détaillé vous est fourni sous 24h. Le projet démarre après validation et versement de l\'acompte (50%). Toutes les communications restent dans l\'application.' },
+        { title: '2. Délais de livraison', text: 'Les délais indiqués sont estimatifs. Un calendrier précis est défini lors de la validation. Tout retard est communiqué en amont via l\'application.' },
         { title: '3. Paiement', text: 'Paiement en deux fois : 50% à la commande, 50% à la livraison. Modes de paiement acceptés : crypto-monnaies, virement bancaire, et autres méthodes discrètes à convenir.' },
-        { title: '4. Révisions & modifications', text: 'Deux cycles de révisions sont inclus dans le tarif de base. Toute modification supplémentaire fera l\\'objet d\\'un devis complémentaire.' },
+        { title: '4. Révisions & modifications', text: 'Deux cycles de révisions sont inclus dans le tarif de base. Toute modification supplémentaire fera l\'objet d\'un devis complémentaire.' },
         { title: '5. Propriété intellectuelle', text: 'Le code source et les livrables sont la propriété du client après paiement intégral. Nos outils et bibliothèques internes restent notre propriété.' },
-        { title: '6. Confidentialité & Anonymat', text: 'La confidentialité est notre priorité absolue. Aucune donnée personnelle n\\'est conservée au-delà du projet. Nous ne partageons aucune information avec des tiers. Aucun journal, aucune trace. Votre projet reste entre vous et nous.' },
-        { title: '7. Politique de non-divulgation', text: 'Nous appliquons un strict protocole de non-divulgation sur chaque projet. Aucune référence client n\\'est publiée sans accord explicite. La discrétion est totale et non négociable.' }
+        { title: '6. Confidentialité & Anonymat', text: 'La confidentialité est notre priorité absolue. Aucune donnée personnelle n\'est conservée au-delà du projet. Nous ne partageons aucune information avec des tiers. Aucun journal, aucune trace. Votre projet reste entre vous et nous.' },
+        { title: '7. Politique de non-divulgation', text: 'Nous appliquons un strict protocole de non-divulgation sur chaque projet. Aucune référence client n\'est publiée sans accord explicite. La discrétion est totale et non négociable.' }
       ]
     },
     about: {
       title: 'À propos',
       subtitle: 'Qui sommes-nous ?',
-      intro: '<strong>Anonymous EvoDevs Shop</strong> est un collectif de développeurs et designers opérant dans l\\'ombre. Nous fournissons tout type de solutions digitales — légales ou non conventionnelles — en toute confiance et discrétion. Pas de questions, pas de traces, que des résultats.',
+      intro: '<strong>Anonymous EvoDevs Shop</strong> est un collectif de développeurs et designers opérant dans l\'ombre. Nous fournissons tout type de solutions digitales — légales ou non conventionnelles — en toute confiance et discrétion. Pas de questions, pas de traces, que des résultats.',
       valuesTitle: '💎 Nos Valeurs',
       values: [
         { icon: '🔒', name: 'Anonymat', desc: 'Votre identité reste protégée' },
@@ -164,7 +164,7 @@ const i18n = {
         { icon: '💎', name: 'Qualité', desc: 'Solutions premium garanties' }
       ],
       skillsTitle: '🛠 Nos Compétences',
-      ctaText: '💬 Pour toute demande, utilisez directement le formulaire de commande dans l\\'onglet <strong>Services</strong>.',
+      ctaText: '💬 Pour toute demande, utilisez directement le formulaire de commande dans l\'onglet <strong>Services</strong>.',
       ctaBtn: 'Voir nos services'
     },
     order: {
@@ -179,13 +179,13 @@ const i18n = {
       descLabel: 'Description du projet',
       descPlaceholder: 'Décrivez votre projet en quelques lignes... Toutes les infos restent confidentielles.',
       urgentLabel: '⚡ Projet urgent (supplément possible)',
-      termsLabel: 'J\\'accepte les <a href="#" onclick="event.preventDefault();closeModal(\\\'orderModal\\\');navigate(\\\'policy\\\')" style="color:var(--silver-300);text-decoration:underline;">conditions générales</a> *',
+      termsLabel: 'J\'accepte les <a href="#" onclick="event.preventDefault();closeModal(\'orderModal\');navigate(\'policy\')" style="color:var(--silver-300);text-decoration:underline;">conditions générales</a> *',
       submitBtn: 'Envoyer la commande',
       sending: 'Envoi...',
       successTitle: 'Commande envoyée !',
       successMsg: 'Merci {name} ! Votre demande pour <strong>{service}</strong> a été reçue. Nous vous recontacterons sous 24h via votre canal sécurisé.',
       close: 'Fermer',
-      errorAlert: 'Erreur lors de l\\'envoi. Veuillez réessayer.',
+      errorAlert: 'Erreur lors de l\'envoi. Veuillez réessayer.',
       retry: 'Réessayer'
     },
     data: {
@@ -201,13 +201,13 @@ const i18n = {
           id: 'ecommerce', icon: '🛒', name: 'Site E-commerce',
           desc: 'Boutique en ligne complète avec paiement et gestion stocks.',
           longDesc: 'Solution e-commerce clé en main avec catalogue produits, panier, systèmes de paiement multiples et gestion des commandes en temps réel.',
-          features: ['Catalogue produits illimité', 'Paiements multiples intégrés', 'Gestion des stocks', 'Dashboard administrateur', 'Formation à l\\'utilisation'],
+          features: ['Catalogue produits illimité', 'Paiements multiples intégrés', 'Gestion des stocks', 'Dashboard administrateur', 'Formation à l\'utilisation'],
           price: '1 400 €', delay: '10-15 jours'
         },
         {
           id: 'mobile', icon: '📱', name: 'Application Mobile',
           desc: 'Apps natives et cross-platform iOS & Android.',
-          longDesc: 'Développement d\\'applications mobiles performantes, publiées sur les stores ou distribuées en privé selon vos besoins.',
+          longDesc: 'Développement d\'applications mobiles performantes, publiées sur les stores ou distribuées en privé selon vos besoins.',
           features: ['Cross-platform iOS & Android', 'UI/UX premium', 'Notifications push', 'API backend incluse', 'Distribution flexible'],
           price: '3 000 €', delay: '15-30 jours'
         },
@@ -221,7 +221,7 @@ const i18n = {
         {
           id: 'design', icon: '🎨', name: 'Design & Identité',
           desc: 'Logos, chartes graphiques et maquettes UI/UX.',
-          longDesc: 'Création d\\'identités visuelles uniques et mémorables. Du logo à la charte graphique complète, en passant par les maquettes d\\'interfaces.',
+          longDesc: 'Création d\'identités visuelles uniques et mémorables. Du logo à la charte graphique complète, en passant par les maquettes d\'interfaces.',
           features: ['3 propositions de logo', 'Charte graphique complète', 'Fichiers HD & vectoriels', 'Maquettes UI/UX Figma', 'Guide de style'],
           price: '100 €', delay: '3-5 jours'
         },
