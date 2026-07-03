@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -13,6 +13,11 @@
   <div id="app">
     <!-- Pages are rendered dynamically by app.js -->
   </div>
+
+  <!-- Language Switcher -->
+  <button id="lang-switcher" class="lang-switcher" onclick="setLanguage(currentLang === 'en' ? 'fr' : 'en')">
+    <span class="lang-text" id="lang-text">FR</span>
+  </button>
 
   <!-- Bottom Navigation -->
   <nav class="bottom-nav" id="bottomNav">

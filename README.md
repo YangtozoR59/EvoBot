@@ -1,14 +1,15 @@
 # 🚀 EvoBot — Evodevs Team Mini App
 
-Bot Telegram + Mini App pour **Evodevs Team** : une SPA glassmorphique argentée intégrée au bot via le Telegram WebApp SDK.
+Bot Telegram + Mini App pour **Evodevs Team** : une SPA glassmorphique argentée intégrée au bot via le Telegram WebApp SDK. Application entièrement bilingue (Anglais par défaut / Français).
 
 ## 📋 Fonctionnalités
 
-- **Bot Telegram** : commandes `/start`, menu interactif (Services, Portfolio, Contact)
-- **Mini App SPA** : 4 pages (Accueil, Services, Politique, À propos)
+- **Bot Telegram** : commandes `/start`, menu interactif bilingue (EN/FR) avec gestion des préférences utilisateur.
+- **Mini App SPA** : 4 pages (Accueil, Services, Politique, À propos) avec support multilingue et bascule de langue à la volée.
+- **Internationalisation (i18n)** : L'Anglais est la langue principale du projet, avec possibilité de passer en Français.
 - **Catalogue de services** : 6 prestations avec détails, tarifs et délais
-- **Formulaire de commande** : envoi de notifications au propriétaire via Telegram Bot API
-- **Design premium** : glassmorphisme, animations, typewriter, compteurs animés
+- **Formulaire de commande** : envoi de notifications au propriétaire via Telegram Bot API (notifications formatées en Anglais)
+- **Design premium** : glassmorphisme, animations, typewriter adaptatif, compteurs animés
 
 ## 🛠 Stack Technique
 
