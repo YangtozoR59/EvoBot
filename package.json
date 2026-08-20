@@ -1,6 +1,6 @@
 {
   "name": "evobot",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Bot Telegram intelligent et Mini App SPA pour Evodevs Team (solutions web, vitrines et Telegram Mini Apps)",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/YangtozoR59/EvoBot#readme",
   "dependencies": {
-    "express": "^5.2.1",
+    "express": "^4.21.2",
     "telegraf": "^4.16.3"
   }
 }
