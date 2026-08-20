@@ -42,6 +42,11 @@ function escapeHtml(text) {
     .replace(/>/g, '&gt;');
 }
 
+// Route Healthcheck pour Render / UptimeRobot
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok', uptime: process.uptime() });
+});
+
 // ==========================================
 // 2. API — PROXY DE COMMANDE SÉCURISÉ
 // ==========================================
@@ -94,13 +99,14 @@ app.post('/api/send-order', async (req, res) => {
   }
 });
 
-// Fallback — sert la SPA pour toutes les routes
-app.get('*', (req, res) => {
+// Fallback universel Express 5 — sert la SPA pour toutes les routes non-API
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`🌐 Serveur Evodevs actif sur http://localhost:${PORT}`);
+// Écoute sur 0.0.0.0 pour compatibilité cloud Render / Railway
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🌐 Serveur Evodevs actif sur port ${PORT}`);
 });
 
 // ==========================================
