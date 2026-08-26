@@ -1,6 +1,6 @@
 /* ==========================================================================
-   EVODEVS TEAM — TELEGRAM MINI APP (V2.0 PRO)
-   Bilingual SPA, -50% Pricing, Haptic Feedback & Order Dispatch
+   EVODEVS TEAM — TELEGRAM MINI APP
+   Zero Emojis, Clean UI, -50% Pricing & Website Integration
    ========================================================================== */
 
 const tg = window.Telegram?.WebApp;
@@ -23,23 +23,26 @@ function haptic(type = 'light') {
   }
 }
 
+const WEBSITE_URL = 'https://evodevstore.netlify.app';
+
 const i18n = {
   fr: {
     nav: { home: 'Accueil', services: 'Services', policy: 'Engagements', about: 'À propos' },
     home: {
       slogan: 'Sites Web Haute Performance.|Telegram Mini Apps & Boutiques.|Tarifs divisés par deux.|Excellence & Rapidité.',
-      desc: 'Développement de solutions digitales sur-mesure pour commerçants, PME et créateurs. Profitez de notre remise exceptionnelle de -50% !',
+      desc: 'Développement de solutions web et applications Telegram sur-mesure pour indépendants et entreprises. Profitez de notre remise exceptionnelle de -50%.',
       cta: 'Découvrir nos offres -50%',
-      chips: ['🔥 -50% Réduction', '⚡ Ultra Rapide', '📱 100% Mobile', '💸 MoMo & OM'],
+      siteBtn: 'Visiter notre site web officiel',
+      chips: ['Offre -50%', 'Ultra Rapide', '100% Mobile', 'Paiement MoMo & OM'],
       stats: ['Projets Livrés', 'Satisfaction Client', '% Disponibilité']
     },
     services: {
       title: 'Nos Services & Tarifs (-50%)',
-      subtitle: 'Des solutions concrètes avec des livrables clairs, divisées par deux',
-      detailBtn: 'Voir détails & commander →',
+      subtitle: 'Des prestations complètes avec livrables précis et sans frais cachés',
+      detailBtn: 'Voir détails & commander',
       timeLabel: 'Délai estimé',
       priceLabel: 'Tarif promotionnel',
-      orderBtn: '📝 Commander ce service'
+      orderBtn: 'Commander ce service'
     },
     policy: {
       title: 'Nos Engagements & Méthode',
@@ -57,18 +60,19 @@ const i18n = {
       title: 'À propos d\'Evodevs',
       subtitle: 'Qui sommes-nous ?',
       intro: '<strong>Evodevs Team</strong> est un collectif de développeurs et designers spécialisé dans la création d\'outils numériques performants pour entrepreneurs, commerçants et PME en Afrique et à l\'international.',
-      valuesTitle: '💎 Nos Piliers',
+      valuesTitle: 'Nos Piliers',
       values: [
-        { icon: '⚡', name: 'Performance', desc: 'Sites ultra-rapides optimisés même en 3G' },
-        { icon: '📱', name: 'Mobile-First', desc: 'Expérience fluide sur tous les smartphones' },
-        { icon: '🤝', name: 'Proximité', desc: 'Échanges directs et réactifs sur WhatsApp' },
-        { icon: '🛡️', name: 'Fiabilité', desc: 'Code propre, sécurisé et pérenne' }
+        { name: 'Performance', desc: 'Sites ultra-rapides optimisés même en 3G' },
+        { name: 'Mobile-First', desc: 'Expérience fluide sur tous les smartphones' },
+        { name: 'Proximité', desc: 'Échanges directs et réactifs sur WhatsApp' },
+        { name: 'Fiabilité', desc: 'Code propre, sécurisé et pérenne' }
       ],
-      ctaText: '💬 Vous avez une idée de projet ? Commandez directement en quelques clics.',
-      ctaBtn: 'Voir le catalogue'
+      ctaText: 'Vous avez une idée de projet ? Commandez directement en quelques clics ou découvrez notre simulateur web.',
+      ctaBtn: 'Voir le catalogue',
+      webBtn: 'Ouvrir le site web officiel'
     },
     order: {
-      title: '📝 Commander une Prestation',
+      title: 'Commander une Prestation',
       nameLabel: 'Votre Nom ou Entreprise *',
       namePlaceholder: 'Ex: Paul Martin / StorePME',
       contactLabel: 'Numéro WhatsApp / Téléphone *',
@@ -77,7 +81,7 @@ const i18n = {
       budgetOptions: ['Sélectionner une tranche', '50k - 100k FCFA', '100k - 200k FCFA', '200k - 400k FCFA', '+ 400k FCFA'],
       descLabel: 'Description du besoin',
       descPlaceholder: 'Décrivez vos fonctionnalités clés, vos délais...',
-      urgentLabel: '⚡ Projet urgent (délai express)',
+      urgentLabel: 'Projet urgent (délai express)',
       submitBtn: 'Envoyer la commande',
       sending: 'Envoi en cours...',
       successTitle: 'Commande Envoyée !',
@@ -89,7 +93,6 @@ const i18n = {
       services: [
         {
           id: 'web',
-          icon: '🌐',
           name: 'Site Vitrine Essentiel',
           desc: '1 à 3 pages responsives, WhatsApp direct, nom de domaine et hébergement 1 an offert.',
           longDesc: 'Idéal pour les indépendants et commerçants souhaitant une présence en ligne propre, rapide et facilement trouvable sur Google.',
@@ -99,7 +102,6 @@ const i18n = {
         },
         {
           id: 'ecommerce',
-          icon: '🚀',
           name: 'Site Web Pro & Catalogue',
           desc: 'Site multi-sections, catalogue interactif, formulaires avancés et référencement SEO.',
           longDesc: 'Pour les entreprises en pleine expansion nécessitant un catalogue complet de produits ou services, avec une architecture pensée pour la conversion.',
@@ -109,7 +111,6 @@ const i18n = {
         },
         {
           id: 'telegram_app',
-          icon: '🛍️',
           name: 'Telegram Mini App E-Commerce',
           desc: 'Boutique complète au sein de Telegram : catalogue, panier et commandes en direct.',
           longDesc: 'Permettez à votre communauté d\'acheter vos produits sans quitter Telegram. Une expérience d\'achat instantanée, fluide et moderne.',
@@ -119,7 +120,6 @@ const i18n = {
         },
         {
           id: 'design',
-          icon: '🎨',
           name: 'Identité Visuelle & Logo',
           desc: 'Logo vectoriel professionnel, charte graphique et déclinaisons réseaux sociaux.',
           longDesc: 'Construisez une image de marque forte et professionnelle qui inspire confiance auprès de vos futurs clients.',
@@ -129,7 +129,6 @@ const i18n = {
         },
         {
           id: 'bot',
-          icon: '🤖',
           name: 'Bot Telegram & Automatisation',
           desc: 'Bot sur-mesure pour réponses automatiques, prise de commandes et alertes 24/7.',
           longDesc: 'Automatisez votre service client et gagnez du temps grâce à un assistant Telegram réactif connecté à votre activité.',
@@ -139,7 +138,6 @@ const i18n = {
         },
         {
           id: 'maintenance',
-          icon: '🛡️',
           name: 'Maintenance & Sérénité',
           desc: 'Hébergement haute disponibilité, sauvegardes hebdomadaires et support dédié.',
           longDesc: 'Déléguez la partie technique pour vous concentrer sur vos ventes. Nous veillons sur la vitesse et la sécurité de votre site.',
@@ -155,18 +153,19 @@ const i18n = {
     nav: { home: 'Home', services: 'Services', policy: 'Commitments', about: 'About' },
     home: {
       slogan: 'High-Performance Websites.|Telegram Mini Apps & Stores.|Prices Cut in Half.|Speed and Excellence.',
-      desc: 'Tailored web solutions engineered to scale your business across Africa and worldwide. Take advantage of our -50% special offer!',
+      desc: 'Tailored web solutions engineered to scale your business across Africa and worldwide. Take advantage of our -50% special offer.',
       cta: 'Explore our -50% services',
-      chips: ['🔥 -50% OFF', '⚡ Ultra Fast', '📱 100% Mobile', '💸 MoMo & OM Ready'],
+      siteBtn: 'Visit our official website',
+      chips: ['Offer -50%', 'Ultra Fast', '100% Mobile', 'MoMo & OM Ready'],
       stats: ['Delivered Projects', 'Customer Satisfaction', '% Uptime']
     },
     services: {
       title: 'Our Services & Pricing (-50%)',
       subtitle: 'Clear packages with tangible deliverables and cut in half',
-      detailBtn: 'View details & order →',
+      detailBtn: 'View details & order',
       timeLabel: 'Estimated timeline',
       priceLabel: 'Special price',
-      orderBtn: '📝 Order this service'
+      orderBtn: 'Order this service'
     },
     policy: {
       title: 'Our Commitments & Workflow',
@@ -184,18 +183,19 @@ const i18n = {
       title: 'About Evodevs',
       subtitle: 'Who are we?',
       intro: '<strong>Evodevs Team</strong> is a collective of specialized engineers and designers building modern digital tools for ambitious businesses and entrepreneurs.',
-      valuesTitle: '💎 Core Pillars',
+      valuesTitle: 'Core Pillars',
       values: [
-        { icon: '⚡', name: 'Performance', desc: 'Ultra-fast loading even on slow 3G networks' },
-        { icon: '📱', name: 'Mobile-First', desc: 'Seamless experience on all smartphones' },
-        { icon: '🤝', name: 'Direct Support', desc: 'Fast human chat via WhatsApp' },
-        { icon: '🛡️', name: 'Reliability', desc: 'Clean, secure, and maintainable codebase' }
+        { name: 'Performance', desc: 'Ultra-fast loading even on slow 3G networks' },
+        { name: 'Mobile-First', desc: 'Seamless experience on all smartphones' },
+        { name: 'Direct Support', desc: 'Fast human chat via WhatsApp' },
+        { name: 'Reliability', desc: 'Clean, secure, and maintainable codebase' }
       ],
-      ctaText: '💬 Ready to launch your project? Order online in a few clicks.',
-      ctaBtn: 'View services'
+      ctaText: 'Ready to launch your project? Order online in a few clicks or explore our interactive web simulator.',
+      ctaBtn: 'View services',
+      webBtn: 'Open official website'
     },
     order: {
-      title: '📝 Order a Solution',
+      title: 'Order a Solution',
       nameLabel: 'Your Name or Company *',
       namePlaceholder: 'e.g. Paul Martin / TechCorp',
       contactLabel: 'WhatsApp / Phone Number *',
@@ -204,7 +204,7 @@ const i18n = {
       budgetOptions: ['Select a range', '$75 - $175', '$175 - $325', '$325 - $600', '+ $600'],
       descLabel: 'Project Description',
       descPlaceholder: 'Describe your key requirements, timelines...',
-      urgentLabel: '⚡ Urgent project (priority turnaround)',
+      urgentLabel: 'Urgent project (priority turnaround)',
       submitBtn: 'Submit Order',
       sending: 'Submitting...',
       successTitle: 'Order Received!',
@@ -216,7 +216,6 @@ const i18n = {
       services: [
         {
           id: 'web',
-          icon: '🌐',
           name: 'Essential Showcase Site',
           desc: '1-3 responsive pages, direct WhatsApp, 1 year domain & hosting included.',
           longDesc: 'Perfect for local merchants and professionals needing a sleek, credible web presence.',
@@ -226,7 +225,6 @@ const i18n = {
         },
         {
           id: 'ecommerce',
-          icon: '🚀',
           name: 'Pro Business Site & Catalog',
           desc: 'Multi-page website, dynamic catalog, custom inquiry forms, and local SEO.',
           longDesc: 'For structured businesses looking to showcase a full catalog of products or services.',
@@ -236,7 +234,6 @@ const i18n = {
         },
         {
           id: 'telegram_app',
-          icon: '🛍️',
           name: 'Telegram Mini App E-Commerce',
           desc: 'Full store inside Telegram: in-app cart, catalog, and real-time order alerts.',
           longDesc: 'Sell directly to your Telegram community with an instant, frictionless checkout experience.',
@@ -246,7 +243,6 @@ const i18n = {
         },
         {
           id: 'design',
-          icon: '🎨',
           name: 'Visual Identity & Logo',
           desc: 'Vector logo design, complete brand guidelines, and social media assets.',
           longDesc: 'Build a distinctive, memorable brand identity that instills confidence in your audience.',
@@ -256,7 +252,6 @@ const i18n = {
         },
         {
           id: 'bot',
-          icon: '🤖',
           name: 'Telegram Bot & Automation',
           desc: 'Custom bots for automated FAQs, lead capture, and instant notifications.',
           longDesc: 'Streamline your customer interactions and save hours with a dedicated automated assistant.',
@@ -266,7 +261,6 @@ const i18n = {
         },
         {
           id: 'maintenance',
-          icon: '🛡️',
           name: 'Maintenance & Peace of Mind',
           desc: 'High-speed cloud hosting, weekly backups, and dedicated priority support.',
           longDesc: 'Focus on growing your revenue while our team maintains security, uptime, and updates.',
@@ -279,7 +273,7 @@ const i18n = {
   }
 };
 
-let currentLang = localStorage.getItem('evobot_lang_v2') || 'fr';
+let currentLang = localStorage.getItem('evobot_lang_v3') || 'fr';
 let currentPage = 'home';
 let selectedService = null;
 let typewriterInterval = null;
@@ -288,7 +282,7 @@ function setLanguage(lang) {
   if (!i18n[lang]) return;
   haptic('selection');
   currentLang = lang;
-  localStorage.setItem('evobot_lang_v2', lang);
+  localStorage.setItem('evobot_lang_v3', lang);
   document.documentElement.lang = lang;
   updateNavTranslations();
   navigate(currentPage, true);
@@ -366,15 +360,17 @@ function renderHome() {
   return `
     <div class="page active" id="page-home">
       <div class="hero">
-        <div class="promo-pill">🔥 OFFRE SPÉCIALE : -50%</div>
-        <h1 class="hero-title">Evo<span>devs</span> Team</h1>
+        <div class="promo-pill">Offre Promotionnelle -50%</div>
+        <h1 class="hero-title">Evo<span>devs</span></h1>
         <p class="hero-slogan" id="typewriter"><span class="cursor"></span></p>
         <p class="hero-desc">${h.desc}</p>
         <div class="hero-actions-row">
           <button class="btn-cta" onclick="haptic('impact');navigate('services')">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
             ${h.cta}
           </button>
+          <a href="${WEBSITE_URL}" target="_blank" class="btn-site-link">
+            ${h.siteBtn} →
+          </a>
         </div>
       </div>
 
@@ -384,15 +380,15 @@ function renderHome() {
 
       <div class="stats-grid">
         <div class="stat-card glass">
-          <div class="stat-number" data-count="35">0</div>
+          <div class="stat-number" data-count="35">35</div>
           <div class="stat-label">${h.stats[0]}</div>
         </div>
         <div class="stat-card glass">
-          <div class="stat-number" data-count="99">0</div>
-          <div class="stat-label">${h.stats[1]} %</div>
+          <div class="stat-number" data-count="99">99 %</div>
+          <div class="stat-label">${h.stats[1]}</div>
         </div>
         <div class="stat-card glass">
-          <div class="stat-number" data-count="100">0</div>
+          <div class="stat-number" data-count="100">100 %</div>
           <div class="stat-label">${h.stats[2]}</div>
         </div>
       </div>
@@ -406,10 +402,9 @@ function renderServices() {
   const cards = svcs.map((s) => `
     <div class="service-card glass-card" onclick="openServiceDetail('${s.id}')">
       <div class="service-header">
-        <div class="service-icon">${s.icon}</div>
+        <div class="service-name">${s.name}</div>
         <span class="service-tag">${s.delay}</span>
       </div>
-      <div class="service-name">${s.name}</div>
       <div class="service-desc">${s.desc}</div>
       <div class="service-price">${s.price}</div>
       <button class="btn-detail">${txt.detailBtn}</button>
@@ -451,7 +446,6 @@ function renderAbout() {
   const a = t('about');
   const valuesHtml = a.values.map((v) => `
     <div class="value-card glass-card">
-      <div class="value-icon">${v.icon}</div>
       <div class="value-name">${v.name}</div>
       <div class="value-desc">${v.desc}</div>
     </div>
@@ -474,7 +468,10 @@ function renderAbout() {
 
         <div class="about-cta glass">
           <p>${a.ctaText}</p>
-          <button class="btn-cta" onclick="haptic('impact');navigate('services')">${a.ctaBtn} →</button>
+          <div class="about-buttons-row">
+            <button class="btn-cta" onclick="haptic('impact');navigate('services')">${a.ctaBtn}</button>
+            <a href="${WEBSITE_URL}" target="_blank" class="btn-site-link">${a.webBtn}</a>
+          </div>
         </div>
       </div>
     </div>`;
@@ -488,15 +485,14 @@ function openServiceDetail(serviceId) {
   selectedService = s;
 
   const txt = t('services');
-  const featuresHtml = s.features.map((f) => `<li>✓ ${f}</li>`).join('');
+  const featuresHtml = s.features.map((f) => `<li>— ${f}</li>`).join('');
 
   const modalBody = document.getElementById('serviceModalBody');
   modalBody.innerHTML = `
     <div class="modal-header">
-      <div class="modal-icon">${s.icon}</div>
       <h3>${s.name}</h3>
       <div class="modal-price">${s.price}</div>
-      <div class="modal-delay">⏱ ${txt.timeLabel} : <strong>${s.delay}</strong></div>
+      <div class="modal-delay">${txt.timeLabel} : <strong>${s.delay}</strong></div>
     </div>
     <div class="modal-desc"><p>${s.longDesc}</p></div>
     <ul class="modal-features">${featuresHtml}</ul>
@@ -505,7 +501,10 @@ function openServiceDetail(serviceId) {
         ${txt.orderBtn}
       </button>
       <a href="https://wa.me/237698448024?text=${encodeURIComponent('Bonjour Evodevs, je souhaite commander : ' + s.name + ' au tarif promotionnel.')}" target="_blank" class="btn-wa-modal">
-        💬 Commander sur WhatsApp
+        Discuter sur WhatsApp
+      </a>
+      <a href="${WEBSITE_URL}#simulateur" target="_blank" class="btn-site-modal">
+        Simulateur sur le Site Web
       </a>
     </div>
   `;
@@ -618,7 +617,6 @@ async function submitOrder(e) {
     const modalBody = document.getElementById('orderModalBody');
     modalBody.innerHTML = `
       <div class="order-success">
-        <div class="success-icon">✅</div>
         <h3>${o.successTitle}</h3>
         <p>${o.successMsg.replace('{name}', name).replace('{service}', selectedService?.name || '')}</p>
         <button class="btn-cta" onclick="closeModal('orderModal')">${o.close}</button>
@@ -674,7 +672,7 @@ function animateCounters() {
     const timer = setInterval(() => {
       current += step;
       if (current >= target) {
-        el.textContent = target;
+        el.textContent = target + (el.dataset.count.includes('%') ? ' %' : '');
         clearInterval(timer);
       } else {
         el.textContent = current;
